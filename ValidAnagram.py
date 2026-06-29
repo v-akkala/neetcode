@@ -1,3 +1,3 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        print("hladsgjhl;akjdslj")
+        print("hladsgjhl;akjdslihgiosadgqj")
