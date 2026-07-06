@@ -10,9 +10,7 @@ class Solution:
         while nodes:
             cur = nodes.popleft()
             if cur:
-                temp = cur.right
-                cur.right = cur.left
-                cur.left = temp
+                cur.right, cur.left = cur.left, cur.right
                 nodes.append(cur.left)
                 nodes.append(cur.right)
         return root
