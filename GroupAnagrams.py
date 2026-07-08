@@ -8,5 +8,5 @@ class Solution:
             anagrams.setdefault(frozenset(tempdict.items()), []).append(s)
         ans = []
         for val in anagrams.values():
-            ans.append(key)
+            ans.append(val)
         return ans
