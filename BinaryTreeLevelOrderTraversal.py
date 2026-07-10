@@ -19,7 +19,6 @@ class Solution:
                 if cur.right:
                     curqueue.append(cur.right)
             if not queue:
-                print(curlist)
                 if curlist:
                     ans.append(curlist)
                 curlist = []
