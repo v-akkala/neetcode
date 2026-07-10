@@ -12,4 +12,3 @@ class Solution:
                     self.ans.add(tuple(sorted(npcands)))
                 elif sum(pcands) + cand < target:
                     self.promising((pcands + (cand,)), candidates, target)
-
