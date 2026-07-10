@@ -30,6 +30,7 @@ class Solution:
             return True and self.lowerValidator(root.left, val) and self.lowerValidator(root.right, val)
         else:
             return False
+
     def higherValidator(self, root: Optional[TreeNode], val: int) -> bool:
         if not root:
             return True
