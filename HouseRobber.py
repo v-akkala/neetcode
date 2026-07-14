@@ -16,6 +16,5 @@ class Solution:
         if len(nums) == 3:
             return
         for x in range(3, len(nums)):
-            print(self.memo[x - 2] + self.memo[x - 4], self.memo[x - 3])
             self.memo[x] = nums[x] + max(self.memo[x - 2], self.memo[x - 3])
 
