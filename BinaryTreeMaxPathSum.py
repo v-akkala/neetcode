@@ -14,10 +14,8 @@ class Solution:
     def recurse(self, root):
         if not root:
             return 0
-        left = self.recurse(root.left)
-        right = self.recurse(root.right)
-        cursum = max(root.val, root.val + left + right, root.val + left, root.val + right)
-        print(cursum)
-        print(root.val)
+        left = max(self.recurse(root.left), 0)
+        right = max(self.recurse(root.right), 0)
+        cursum = max(root.val, root.val + left + right)
         self.ans = max(self.ans, cursum)
         return root.val + max(left, right, 0)
