@@ -31,15 +31,27 @@ class WordDictionary:
                     c += 1
                     if i + c >= len(word) - 1: 
                         return True
-                for node in cur.children.values():
-                    if word[i + 1] in node.children:
-                        cur = node.children[word[i + 1]]
-                        i += 1
-                        break
-                    else:
-                        return False
+                recursedots(word, i + 1)
+                if self.ans:
+                    return True
+                i += c
             i += 1
         return cur.endofword
+    
+    def recursedots(self, word, index):
+        self.ans = False
+        if index >= len(word) - 1:
+            self.ans = True
+            break
+        for node in cur.children.values():
+            if word[index] == ".":
+                backtrack(word, index + 1)
+            elif word[index] in node.children:
+                cur = node.children[word[index]]
+                i += 1
+                break
+            else:
+                return False
 
 
 # Your WordDictionary object will be instantiated and called as such:
