@@ -7,7 +7,6 @@ class Solution:
         for row in range(len(board)):
             for col in range(len(board[0])):
                 self.backtrack(0, row, col)
-                self.visited = set()
                 if self.ans:
                     return self.ans
         return self.ans
