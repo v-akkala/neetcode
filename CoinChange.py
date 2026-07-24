@@ -18,6 +18,6 @@ class Solution:
                     temp.append(change[x - coin] + 1)
             if temp:
                 change[x] = min(temp)
-                
+
         return change[amount]
 
