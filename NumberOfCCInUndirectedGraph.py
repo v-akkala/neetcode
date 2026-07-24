@@ -17,7 +17,7 @@ class Solution:
                     if adjnode not in visited:
                         dfs(adjnode)
             self.ans += 1
-        
+
         for node in range(n):
             dfs(node)
 
