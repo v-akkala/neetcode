@@ -10,5 +10,3 @@ class Solution:
                 start = i + 1
                 fuel = 0
         return start
-
-
