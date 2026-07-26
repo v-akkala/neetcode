@@ -5,7 +5,6 @@ class Solution:
             timeline.append((interval[0], 1))
             timeline.append((interval[1], -1))
         timeline.sort()
-        ans = 0
         cur = 0
         maxrooms = 0
         for time in timeline:
