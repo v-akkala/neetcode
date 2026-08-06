@@ -2,11 +2,16 @@ class Solution:
     def trap(self, height: List[int]) -> int:
         ans = 0
         stack = []
-        for i, height in enumerate(heights):
-            while stack and stack[-1] <= height:
-                numidx = stack.pop()
-                ans = numidx 
+        lastnum = -1
+        for idx, num in enumerate(height):
 
-# mono stack
-# add distance between next elt that is equal or greater to the current elt to total
-# add distance between elt - next elt and elt that pops - elt before * distance + 
+            while stack and stack[-1][0] <= num:
+                lastnum, lastidx = stack.pop()
+                if not stack:
+                    break
+                ans += (min(stack[-1][0], num) - lastnum) * (idx - stack[-1][1] - 1)
+
+            stack.append([num, idx])
+
+        return ans
+
