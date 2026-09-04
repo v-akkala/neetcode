@@ -20,3 +20,4 @@ class MinStack:
     def getMin(self):
         return self.min[0]
 
+#test
