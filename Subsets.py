@@ -1,15 +1,12 @@
 class Solution:
     def subsets(self, nums):
-        subsets = set()
-        subset = []
+        ans = []
 
-        def backtrack(subset, nums):
-            subsets.add(tuple(sorted(subset)))
-            for i in range(len(nums)):
-                num = nums.pop(i)
-                backtrack(subset + [num], nums)
-                nums.insert(i, num)
+        def backtrack(cur, nums, start):
+            ans.append(cur)
+            for i in range(start, len(nums)):
+                backtrack(cur + [nums[i]], nums, i + 1)
 
-        backtrack(subset, nums)
+        backtrack([], nums, 0)
 
-        return [list(subset) for subset in subsets]
+        return ans
