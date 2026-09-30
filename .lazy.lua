@@ -5,6 +5,6 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		opts = { diagnostics = { virtual_text = false, underline = false } },
+		opts = { diagnostics = { virtual_text = false, underline = false, signs = false } },
 	},
 }
