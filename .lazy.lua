@@ -7,4 +7,8 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = { diagnostics = { virtual_text = false, underline = false, signs = false } },
 	},
+	{
+		"akinsho/bufferline.nvim",
+		opts = { options = { diagnostics = false } },
+	},
 }
