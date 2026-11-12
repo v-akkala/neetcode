@@ -2,7 +2,7 @@ class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
         nums.sort()
         ans = set()
-        for x in range(0, len(nums) - 1):
+        for x in range(len(nums) - 1):
             lidx = x + 1
             low = nums[lidx]
             hidx = len(nums) - 1
